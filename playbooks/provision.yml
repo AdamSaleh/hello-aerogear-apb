@@ -1,9 +1,9 @@
-- name: hello-world-apb provision
+- name: hello-aerogear-apb provision
   hosts: localhost
   gather_facts: false
   connection: local
   roles:
   - role: ansible.kubernetes-modules
     install_python_requirements: no
-  - role: provision-hello-world-apb
+  - role: provision-hello-aerogear-apb
     playbook_debug: false
