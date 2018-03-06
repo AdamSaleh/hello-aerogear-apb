@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: 'helloaerogear'
+  namespace: {{ namespace }}
+  labels:
+    mobile: enabled
+    serviceName: helloaerogear
+data:
+  type: helloaerogear
+  name: helloaerogear
+  uri: {{ hello_aerogear_route.stdout }}
+  api_key: "MAGICWORDSARESECRETOSSIFRAGE"

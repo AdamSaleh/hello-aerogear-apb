@@ -1,19 +1,18 @@
 version: 1.0
-name: hello-world-apb
-description: deploys hello-world web application
+name: hello-aerogear-apb
+description: deploys hello-aerogear web application
 bindable: False
 async: optional
+tags:
+  - mobile-service
 metadata:
-  displayName: Hello World (APB)
-  longDescription: A sample APB which deploys a containerized Hello World web application
-  dependencies: ['docker.io/ansibleplaybookbundle/hello-world:latest']
+  displayName: Hello Aerogear (APB)
+  serviceName: hello-aerogear-apb
+  integrations: hello-aerogear-db-apb
   providerDisplayName: "Red Hat, Inc."
 plans:
   - name: default
     description: A sample APB which deploys Hello World
     free: True
-    metadata:
-      displayName: Default
-      longDescription: This plan deploys a Python web application displaying Hello World
-      cost: $0.00
+    metadata: {}
     parameters: []
