@@ -13,17 +13,14 @@
 # one deployment of an image to a new one.
 # https://docs.openshift.org/latest/architecture/core_concepts/deployments.html#deployments-and-deployment-configurations
 #############################################################################
-- name: create deployment config
-  openshift_v1_deployment_config:
+- name: create k8s deployment
+  k8s_extensions_v1beta1_deployment:
     name: hello-aerogear
     namespace: '{{ namespace }}'
     labels:
       app: hello-aerogear
       service: hello-aerogear
     replicas: 1
-    selector:
-      app: hello-aerogear
-      service: hello-aerogear
     spec_template_metadata_labels:
       app: hello-aerogear
       service: hello-aerogear
